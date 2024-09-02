@@ -1,0 +1,22 @@
+<div class="hero-list">
+  @for (hero of heroes; track heroes){
+  <tui-accordion class="container">
+    <tui-accordion-item class="hero-accordion">
+      <div class="accordion-title">
+        <span class="hero-name">{{ hero.name }}</span>
+        <span class="hero-level">{{ hero.level }}</span>
+      </div>
+      <ng-template tuiAccordionItemContent>
+        <div class="hero-information">
+          <span class="hero-power">Сила: {{ hero.power }}</span>
+          <div class="hero-abilities">
+            Способности: @for (ability of hero.abilities; track ability) {
+            <tui-chip class="hero-ability">{{ ability }}</tui-chip>
+            }
+          </div>
+        </div>
+      </ng-template>
+    </tui-accordion-item>
+  </tui-accordion>
+  }
+</div>

@@ -1,0 +1,42 @@
+<div class="tui-container">
+  <form [formGroup]="abilityForm">
+    <div class="tui-row tui-row_sme">
+      <div class="tui-col_8">
+        <h3 class="tui-form__header tui-form__header_margin-top_none">
+          Добавление способности
+        </h3>
+        <div class="tui-form__row">
+          <tui-input formControlName="nameValue" tuiHintContent="A tooltip">
+            Название способности
+            <input placeholder="Field placeholder" tuiTextfieldLegacy />
+            <span class="tui-required"></span>
+          </tui-input>
+          <tui-error
+            formControlName="nameValue"
+            [error]="[] | tuiFieldError | async"
+          />
+        </div>
+        <div class="tui-form__buttons">
+          <button size="l" tuiButton type="submit" class="tui-form__button">
+            Submit
+          </button>
+          <button
+            appearance="flat"
+            size="l"
+            tuiButton
+            type="button"
+            class="tui-form__button"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+    <ng-template #accountContent let-account>
+      <span class="account">
+        {{ account.name }}
+        <span>{{ account.amount | tuiAmount : "RUB" | async }}</span>
+      </span>
+    </ng-template>
+  </form>
+</div>

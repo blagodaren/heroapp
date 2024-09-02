@@ -1,0 +1,35 @@
+.accordion-title{
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-information{
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-abilities{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  height: min-content;
+  align-items: center;
+}
+
+.hero-accordion{
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+// .hero-title{
+//   font-size: 24px;
+//   margin: 20px 20px;
+//   font-weight: 500;
+// }
+
+.hero-list{
+  width: 500px;
+  border: 1px solid #00000021;
+  border-radius: 8px;
+  padding: 8px;
+}
